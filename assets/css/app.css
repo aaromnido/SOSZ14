@@ -1935,18 +1935,6 @@ button, .button {
     background-color: #e7e7e7;
     color: #333333; }
 
-[data-magellan-expedition] {
-  background: white;
-  z-index: 50;
-  min-width: 100%;
-  padding: 10px; }
-  [data-magellan-expedition] .sub-nav {
-    margin-bottom: 0; }
-    [data-magellan-expedition] .sub-nav dd {
-      margin-bottom: 0; }
-    [data-magellan-expedition] .sub-nav .active {
-      line-height: 1.8em; }
-
 ul.pagination {
   display: block;
   height: 1.5rem;
@@ -3601,10 +3589,15 @@ body {
  * HEADER
  */
 .header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
   background: #1b2f3b;
   text-align: center;
   padding: 1em 0 0 0;
-  border-bottom: 1px solid #233d4c; }
+  border-bottom: 1px solid #233d4c;
+  /* end sub-nav-custom */ }
   .header .sub-nav-custom {
     text-align: right;
     padding-top: 0.3em; }

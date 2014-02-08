@@ -1099,7 +1099,9 @@
 
 
 /* Custom JS scripts */
-
+/*
+ * CUSTOM JAVASCRIPT AND JQUERY SCRIPTS
+ */
 
 
 console.log("Ok, scripts loading");

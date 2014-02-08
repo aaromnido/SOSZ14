@@ -37,6 +37,10 @@ body {
  * HEADER
  */
 .header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
     background: $night-medium;
     text-align: center;
     padding: 1em 0 0 0;
@@ -63,7 +67,7 @@ body {
           }
         }
       }
-    }
+    }/* end sub-nav-custom */
 }/* end header */
 
 /**
