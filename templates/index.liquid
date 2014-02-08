@@ -1,0 +1,87 @@
+{% block content %}
+
+<header class="large-12 columns header" id="header">
+    <div class="row wrapper">
+        <div class="large-12 columns inner">
+            <img src="{{ "logo-sosz-small.png" | asset_url }}" alt="{{ global.title }}">
+        </div>
+    </div>
+</header><!-- end header -->
+
+<div class="large-12 columns hero" id="hero">
+    <div class="row wrapper">
+        <div class="hero-left">
+            <h1 class="logo">{{ global.title }}</h1>
+            <h3>
+                <strong>22</strong> de <strong>Febrero</strong> de 2014<br>
+                Centro de Arte y Tecnología de Zaragoza<br>
+                <small>By <strong>Cachirulo Valley</strong></small>
+            </h3>
+        </div>
+    </div>
+</div><!-- end hero -->
+
+<div class="large-12 columns description" id="description">
+    <div class="row wrapper">
+        <div class="large-12 columns inner">
+            <h2>Presentación del evento</h2>
+            <p>El próximo sábado 22 de Febrero, de 9:30 a 18:00h tendrá lugar en Etopia Centro de Arte y Tecnología de Zaragoza la “Startup Open Space Zaragoza”, una de las primeras Open Space de España en esta temática, organizada por el colectivo CachiruloValley, con la colaboración de Ayuntamiento de Zaragoza y Cervezas Ámbar.</p>
+            <p>Durante casi siete horas de charlas, <strong>se podrá escuchar, hablar y debatir entre iguales, de las experiencias y desventuras en la creación y gestión de empresas tecnológicas</strong> del resto de los asistentes. El objetivo es aprender juntos, acercar las realidades y casos prácticos de cada uno para promover la colaboración y networking y sobretodo fomentar el ecosistema emprendedor y tecnológico español. </p>
+            <p>El evento nace con un tema global, las startups, pero comienza sin agenda organizada, son los propios asistentes los que proponen charlas concretas, y seleccionándose las que más interés despierten, se establecen los aforos y horarios, cerrando el programa del día. No hay ponentes definidos, son los asistentes los que facilitan las charlas, acercando sus impresiones, experiencias, dificultades y descubrimientos al resto, es por todo esto por lo que se llama a estos eventos como <strong>NO-conferencia</strong>.</p>
+            <p>Se esperan tratar temáticas como: pricing, lean startup, financiación, metodologías ágiles, bootstraping, tecnologías y lenguajes de programación, organización y herramientas de comunicación, trabajo en equipo, gestión de proyectos… o cualquier otra que pueda surgir y despertar interés.</p>
+        </div>
+    </div>
+</div><!-- end description -->
+
+<div class="large-12 columns tshirt" id="tshirt">
+    <div class="row wrapper">
+        <div class="large-12 columns inner">
+            <h2>¿Quieres aparecer aquí?</h2>
+            <img src="{{ "t-shirt-0.png" | asset_url }}" alt="Camisetas {{ global.title }}">
+            <a href="{{ global.tweet-url }}" class="button large radius" target="_blank">Quiero copatrocinar la camiseta</a>
+        </div>
+    </div>
+</div><!-- end tshirt -->
+
+<div class="large-12 columns where-map" id="where-map">
+    <div class="row wrapper">
+        <div class="large-12 columns inner">
+            <h2>Lugar: Centro de Arte y Tecnología de Zaragoza</h2>
+            <h5>Avda. Ciudad de Soria, 8 - acceso por Avda. Autonomía, 7 Planta B50003 - Zaragoza <a href="http://www.zaragoza.es/ciudad/centros/detalle_Centro?id=5105" class="label radius" target="_blank">Web</a></h5>
+        </div>
+    </div>
+</div><!-- end where-map -->
+
+<div class="large-12 columns where-photo" id="where-photo">
+    <div class="row wrapper">
+        <div class="large-12 columns inner">
+        </div>
+    </div>
+</div><!-- end where-photo -->
+
+<div class="large-12 columns partners" id="tshirt">
+    <div class="row wrapper">
+        <div class="large-12 columns inner">
+            <h2>Ptrocinan:</h2>
+            <img src="{{ "patrocinadores.png" | asset_url }}" alt="Patrocian: ETOPIA, Ayuntamiento de Zaragoza y Cerveza AMBAR">
+        </div>
+    </div>
+</div><!-- end partners -->
+
+<div class="large-12 columns organize" id="organize">
+    <div class="row wrapper">
+        <div class="large-12 columns inner">
+            <h2>Organizado por Cachirulo Valley</h2>
+        </div>
+    </div>
+</div><!-- end organize -->
+
+<footer class="large-12 columns footer" id="footer">
+    <div class="row wrapper">
+        <div class="large-12 columns inner">
+            <p><small>Copyright: Cachirullo Valley 2014</small></p>
+        </div>
+    </div>
+</footer><!-- end footer -->
+
+{% endblock %}

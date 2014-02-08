@@ -1,0 +1,137 @@
+/* -----------------------------------------
+   Vars and Mixins
+----------------------------------------- */
+
+$white: #FFF;
+$silver: rgb(225,235,232);
+$grey: rgb(144,153,163);
+$grey-dark: rgb(144,153,163);
+
+$yellow: rgb(255,203,0);
+$gold: rgb(255,168,0);
+$orange: rgb(255,128,0);
+
+$red: rgb(244,42,0);
+$red-dark: rgb(244,42,0);
+
+$blue: rgb(23,92,125);
+$night: rgb(18,36,46);
+$night-medium: rgb(27,47,59);
+$black: #0d1319;
+
+
+$green: #00B090;
+$green-dark: rgba(28, 115, 108, 1);
+$overlay-color: rgba(28, 115, 108, 0.2);
+$placeholder-color: lighten($night, 50%);
+
+
+$font-main: 'Source Sans Pro', 'Helvetica Neue', Arial, sans-serif;
+
+@mixin border-radius($radius:3px){
+  -webkit-border-radius: $radius;
+  border-radius: $radius;
+}
+
+@mixin gradient-v($color-top, $color-bottom){
+  background: $color-top; /* Old browsers */
+  background: -moz-linear-gradient(top,  $color-top 0%, $color-bottom 100%); /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,$color-top), color-stop(100%,$color-bottom)); /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top,  $color-top 0%,$color-bottom 100%); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top,  $color-top 0%,$color-bottom 100%); /* Opera 11.10+ */
+  background: -ms-linear-gradient(top,  $color-top 0%,$color-bottom 100%); /* IE10+ */
+  background: linear-gradient(to bottom,  $color-top 0%,$color-bottom 100%); /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$color-top', endColorstr='$color-bottom',GradientType=0 ); /* IE6-9 */
+}
+@mixin transition-opacity($duration:0.4s){
+  -webkit-transition: opacity $duration ease;
+  -moz-transition: opacity $duration ease;
+  -o-transition: opacity $duration ease;
+  -ms-transition: opacity $duration ease;
+  transition: opacity $duration ease;
+}
+@mixin transition-bgc($duration:0.4s){
+  -webkit-transition: background-color $duration ease;
+  -moz-transition: background-color $duration ease;
+  -o-transition: background-color $duration ease;
+  -ms-transition: background-color $duration ease;
+  transition: background-color $duration ease;
+}
+@mixin transition-color($duration:0.4s){
+  -webkit-transition: color $duration ease;
+  -moz-transition: color $duration ease;
+  -o-transition: color $duration ease;
+  -ms-transition: color $duration ease;
+  transition: color $duration ease;
+}
+@mixin transition-rotation($duration:0.4s){
+  -webkit-transition: -webkit-transform $duration ease-in;
+}
+@mixin rotate($angle:7deg){
+  transform:rotate($angle);
+  -ms-transform:rotate($angle);
+  -moz-transform:rotate($angle);
+  -webkit-transform:rotate($angle);
+  -o-transform:rotate($angle);
+}
+@mixin box-shadow($right:0, $bottom:2, $blur:5, $spread:0, $color: $black){
+  -webkit-box-shadow:  $right $bottom $blur $spread $color;
+  box-shadow:  $right $bottom $blur $spread $color;
+}
+@mixin text-shadow-top($color:$white, $distance:-2px){
+  text-shadow: 0px $distance 0px $color;
+  filter: dropshadow(color=$color, offx=0, offy=$distance);
+}
+@mixin text-shadow-bottom($color:$black, $size: 1px){
+  text-shadow: 0px $size 0px $color;
+  filter: dropshadow(color=$color, offx=0, offy=1);
+}
+@mixin links{
+  color: $blue;
+  background-color: lighten($blue, 62%);
+  padding: 0 0.3em;
+  @include transition-color;
+  @include transition-bgc;
+  &:hover{
+    color: $blue;
+    background-color: lighten($blue, 47%);
+  }
+}
+@mixin ul{
+   ul{
+    padding: 0.7em 2em;
+    font-size: emCalc(15px);
+    line-height: 1.4em;
+    list-style-image: url(../img/bullet.png);
+    background-color: lighten($green, 62%);
+    color: darken($green-dark, 10%);
+    li{
+      padding: 0.5em 0.3em;
+    }
+    ul{
+      padding: 0.2em 2em;
+      font-size: emCalc(14px);
+      line-height: 1.4em;
+      list-style-image: url(../img/bullet-2.png);
+      li{
+        padding: 0.25em 0.2em;
+      }
+    }
+  }/* / .ul */
+}
+
+@mixin bicolor-bg($color-left, $color-right: lighten($color-left, 3%), $angle: 45deg){
+  background-image: -webkit-linear-gradient($angle, $color-left, $color-left 50%, $color-right 50%, $color-right 100%);
+  background-image: -moz-linear-gradient($angle, $color-left, $color-left 50%, $color-right 50%, $color-right 100%);
+}
+
+
+@mixin inset-shadow ($left:5px, $top:5px, $blur:5px, $color:rgba(0,0,0,0.1)){
+  -moz-box-shadow:inset $left $top $blur 0 $color;
+  -webkit-box-shadow:inset $left $top $blur 0 $color;
+  box-shadow:inset $left $top $blur 0 $color;
+}
+
+@function emCalc($target, $context:16) {
+    @return $target / $context * 1em;
+}
