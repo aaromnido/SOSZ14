@@ -1,6 +1,10 @@
 {
   "debug": false,
   "domain": null,
+  "gitHubPages": {
+    "guid": "8B500D43-1ED3-47CE-BE59-C54829E6E815",
+    "repoUrl": "git@github.com:cachirulovalley/SOSZ14web.git"
+  },
   "lintScripts": false,
   "modelSource": null,
   "preprocessorLocations": "assets",
