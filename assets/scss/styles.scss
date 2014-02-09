@@ -5,6 +5,7 @@
    ========================================================================== */
 
 $vertical-padding: 80px;
+$transition-speed: 0.6s;
 
 /**
  * HTML and General styles
@@ -31,6 +32,9 @@ body {
       letter-spacing: 0.03em !important;
       @include text-shadow-bottom($night, 2px);
     }
+    a{
+      transition: $transition-speed;
+    }
 }/* end body */
 
 /**
@@ -45,6 +49,13 @@ body {
     text-align: center;
     padding: 1em 0 0 0;
     border-bottom: 1px solid lighten($night-medium, 5%);
+    .logo{
+      opacity: 0.9;
+      transition: opacity $transition-speed;
+      &:hover{
+        opacity: 1;
+      }
+    }
     .sub-nav-custom{
       text-align: right;
       padding-top: 0.3em;
@@ -60,7 +71,7 @@ body {
           padding: 0.2em 1em;
           color: $a-color;
           @include border-radius(3px);
-          transition: border-color 1s, color 1s;
+          transition: border-color $transition-speed, color $transition-speed;
           &.active, &:hover{
             border: 1px solid $hover-color;
             color: $hover-color;
@@ -115,6 +126,13 @@ body {
 .description {
   padding-top: $vertical-padding;
   padding-bottom: $vertical-padding;
+  .footer{
+    border-top: 2px solid $night-medium;
+    border-bottom: 2px solid $night-medium;
+    margin-top: 40px;
+    padding: 1em;
+    text-align: center !important;
+  }
 }/* end description */
 
 /**
@@ -139,6 +157,10 @@ body {
     border: 3px solid white;
     text-transform: uppercase;
     margin-top: -60px;
+    transition: background $transition-speed;
+    &:hover{
+      background: $blue;
+    }
   }
 }/* end tshirt */
 
@@ -156,6 +178,7 @@ body {
   min-height: 850px;
   border-bottom: ($vertical-padding * 1.5) solid $white;
   a.label{
+    transition: background $transition-speed;
     &:hover{
       background: $blue;
       color: $white;
@@ -173,7 +196,7 @@ body {
  * PARTNERS
  */
 .partners {
-  padding-top: 80px;
+  padding-top: 120px;
   padding-bottom: 80px;
   //text-align: center;
   h2{
@@ -188,9 +211,9 @@ body {
 .organize {
   padding-top: $vertical-padding;
   padding-bottom: $vertical-padding;
-  background: url('../img/cachirulo-valley-bg.jpg') center top no-repeat;
+  background: url('../img/cachirulo-valley-bg.jpg') center -40px no-repeat;
   background-size: cover;
-  min-height: 600px;
+  min-height: 560px;
   h2{
     color: $white;
     margin-top: 60%;
@@ -198,9 +221,9 @@ body {
 }/* end organize */
 
 /**
- * FOOTER
+ * PAGE FOOTER
  */
-.footer {
+.page-footer {
   background: $night;
   p, small{
     color: $white;
@@ -211,6 +234,6 @@ body {
     padding-top: 20px;
     padding-bottom: $vertical-padding;
   }
-}/* end organize */
+}/* end page-footer */
 
 

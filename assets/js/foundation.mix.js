@@ -20,4 +20,6 @@
 //@import 'foundation/foundation.topbar.js';//
 
 /* Custom JS scripts */
+@import 'fullpage.js';
+/* Custom JS scripts */
 @import 'scripts.js';
